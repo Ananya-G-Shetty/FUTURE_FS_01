@@ -57,15 +57,15 @@
         </div>
 
         <div class="socials">
-  <a href="YOUR_GITHUB_LINK" target="_blank" aria-label="GitHub">
+  <a href="https://github.com/Ananya-G-Shetty/" target="_blank" aria-label="GitHub">
     <i class="fa-brands fa-github"></i>
   </a>
 
-  <a href="YOUR_LINKEDIN_LINK" target="_blank" aria-label="LinkedIn">
+  <a href="https://www.linkedin.com/in/ananya-shetty-76763b328/" target="_blank" aria-label="LinkedIn">
     <i class="fa-brands fa-linkedin-in"></i>
   </a>
 
-  <a href="mailto:YOUR_EMAIL@example.com" aria-label="Email">
+  <a href="mailto:ananyashetty925@gmail.com" aria-label="Email">
     <i class="fa-solid fa-envelope"></i>
   </a>
 </div>
@@ -437,20 +437,88 @@
   </div>
 </section>
 
-    <section class="contact section" id="contact">
-      <div class="contact-card reveal">
-        <div class="contact-copy">
-          <span class="section-kicker">07 / CONTACT</span>
-          <h2>Let's build something <span>interesting.</span></h2>
-          <p>Have a project, collaboration or opportunity in mind? I'd love to hear about it.</p>
-        </div>
-        <div class="contact-details">
-          <a href="mailto:ananyashetty925@gmail.com"><small>EMAIL</small><strong>ananyashetty925@gmail.com</strong></a>
-          <a href="https://www.linkedin.com/in/ananya-shetty-76763b328/" target="_blank"><small>LINKEDIN</small><strong>Connect with me ↗</strong></a>
-          <a href="https://github.com/ananya-g-shetty" target="_blank"><small>GITHUB</small><strong>View my code ↗</strong></a>
-        </div>
+   <section class="contact section" id="contact">
+  <div class="contact-card reveal">
+
+    <div class="contact-copy">
+      <span class="section-kicker">07 / CONTACT</span>
+
+      <h2>Let's build something <span>interesting.</span></h2>
+
+      <p>
+        Have a project, collaboration or opportunity in mind?
+        I'd love to hear about it.
+      </p>
+
+      <div class="contact-details">
+        <a href="mailto:ananyashetty925@gmail.com">
+          <small>EMAIL</small>
+          <strong>ananyashetty925@gmail.com</strong>
+        </a>
+
+        <a href="https://www.linkedin.com/in/ananya-shetty-76763b328/"
+           target="_blank"
+           rel="noopener">
+          <small>LINKEDIN</small>
+          <strong>Connect with me ↗</strong>
+        </a>
+
+        <a href="https://github.com/ananya-g-shetty"
+           target="_blank"
+           rel="noopener">
+          <small>GITHUB</small>
+          <strong>View my code ↗</strong>
+        </a>
       </div>
-    </section>
+    </div>
+
+
+    <form class="contact-form" id="contact-form">
+
+      <div class="form-group">
+        <label for="from_name">Name</label>
+        <input
+          type="text"
+          id="from_name"
+          name="from_name"
+          placeholder="Your name"
+          required
+        >
+      </div>
+
+      <div class="form-group">
+        <label for="from_email">Email</label>
+        <input
+          type="email"
+          id="from_email"
+          name="from_email"
+          placeholder="your@email.com"
+          required
+        >
+      </div>
+
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea
+          id="message"
+          name="message"
+          rows="5"
+          placeholder="Tell me about your project or opportunity..."
+          required
+        ></textarea>
+      </div>
+
+      <button type="submit" class="contact-submit" id="contact-submit">
+        Send Message <span>↗</span>
+      </button>
+
+      <p class="form-status" id="form-status"></p>
+
+    </form>
+
+  </div>
+</section>
+
   </main>
 
   <footer>
@@ -484,6 +552,13 @@
       </div>
     </div>
   </div>
-  <script src="script.js"></script>
+
+  <script
+  type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+
+<script src="script.js"></script>
+
 </body>
 </html>

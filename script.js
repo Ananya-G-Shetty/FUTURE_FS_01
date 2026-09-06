@@ -138,3 +138,58 @@ document.addEventListener("keydown", function(event) {
   }
 
 });
+
+/* =========================================================
+   CONTACT FORM — EMAILJS
+   ========================================================= */
+
+emailjs.init({
+  publicKey: "KjjcOvQ9YyI9Id3qu"
+});
+
+const contactForm = document.getElementById("contact-form");
+const contactSubmit = document.getElementById("contact-submit");
+const formStatus = document.getElementById("form-status");
+
+if (contactForm) {
+
+  contactForm.addEventListener("submit", function (event) {
+
+    event.preventDefault();
+
+    contactSubmit.disabled = true;
+    contactSubmit.innerHTML = "Sending...";
+
+    emailjs.sendForm(
+      "service_a17frwi",
+      "template_22et73i",
+      this
+    )
+    .then(() => {
+
+      formStatus.textContent = "✓ Message sent successfully!";
+      formStatus.className = "form-status success";
+
+      contactForm.reset();
+
+      contactSubmit.disabled = false;
+      contactSubmit.innerHTML = "Send Message <span>↗</span>";
+
+    })
+    .catch((error) => {
+
+      console.error("EmailJS Error:", error);
+
+      formStatus.textContent =
+        "Something went wrong. Please try again.";
+
+      formStatus.className = "form-status error";
+
+      contactSubmit.disabled = false;
+      contactSubmit.innerHTML = "Send Message <span>↗</span>";
+
+    });
+
+  });
+
+}
